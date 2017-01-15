@@ -1,5 +1,4 @@
 var express = require('express');
-var chalk = require('chalk');
 var app = express();
 
 app.get('/', function(req, res) {
@@ -10,8 +9,14 @@ app.get('/home', function(req, res) {
     res.send('<h1>Im home</h1>');
 });
 
-var port = process.env.npm_package_config_port;
+app.get('/download', function(req, res) {
+    res.download('./package.json', function() {
+        console.log('download complete!');
+    });
+});
+
+var port = process.env.PORT || 3000;
 
 app.listen(port, function() {
-    console.log(chalk.yellow('im running ' + port));
+    console.log('im running ' + port);
 });
