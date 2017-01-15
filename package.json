@@ -1,0 +1,20 @@
+{
+    "name": "d2",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "scripts": {
+        "start": "nodemon app.js",
+        "prestart": "cls",
+        "poststart": "dir"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "chalk": "^1.1.3",
+        "express": "^4.14.0"
+    },
+    "config": {
+        "port": "3000"
+    }
+}
